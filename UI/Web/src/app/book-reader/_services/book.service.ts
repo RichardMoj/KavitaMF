@@ -6,44 +6,45 @@ import { BookChapterItem } from '../_models/book-chapter-item';
 import { BookInfo } from '../_models/book-info';
 
 export interface FontFamily {
-  /**
-   * What the user should see
-   */
-  title: string;
-  /**
-   * The actual font face
-   */
-  family: string;
+    /**
+     * What the user should see
+     */
+    title: string;
+    /**
+     * The actual font face
+     */
+    family: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class BookService {
 
-  baseUrl = environment.apiUrl;
+    baseUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-  getFontFamilies(): Array<FontFamily> {
-    return [{title: 'default', family: 'default'}, {title: 'EBGaramond', family: 'EBGaramond'}, {title: 'Fira Sans', family: 'Fira_Sans'},
-    {title: 'Lato', family: 'Lato'}, {title: 'Libre Baskerville', family: 'Libre_Baskerville'}, {title: 'Merriweather', family: 'Merriweather'},
-    {title: 'Nanum Gothic', family: 'Nanum_Gothic'}, {title: 'RocknRoll One', family: 'RocknRoll_One'}, {title: 'Open Dyslexic', family: 'OpenDyslexic2'}];
-  }
+    getFontFamilies(): Array<FontFamily> {
+        return [{ title: 'default', family: 'default' }, { title: 'EBGaramond', family: 'EBGaramond' }, { title: 'Fira Sans', family: 'Fira_Sans' },
+        { title: 'Lato', family: 'Lato' }, { title: 'Libre Baskerville', family: 'Libre_Baskerville' }, { title: 'Merriweather', family: 'Merriweather' },
+        { title: 'Nanum Gothic', family: 'Nanum_Gothic' }, { title: 'RocknRoll One', family: 'RocknRoll_One' }, { title: 'Open Dyslexic', family: 'OpenDyslexic2' },
+        { title: 'Comic Neue', family: 'Comic_Neue' }, { title: 'Atkison Hyperlegible', family: 'Atkison_Hyperlegible' }];
+    }
 
-  getBookChapters(chapterId: number) {
-    return this.http.get<Array<BookChapterItem>>(this.baseUrl + 'book/' + chapterId + '/chapters');
-  }
+    getBookChapters(chapterId: number) {
+        return this.http.get<Array<BookChapterItem>>(this.baseUrl + 'book/' + chapterId + '/chapters');
+    }
 
-  getBookPage(chapterId: number, page: number) {
-    return this.http.get<string>(this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page, TextResonse);
-  }
+    getBookPage(chapterId: number, page: number) {
+        return this.http.get<string>(this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page, TextResonse);
+    }
 
-  getBookInfo(chapterId: number) {
-    return this.http.get<BookInfo>(this.baseUrl + 'book/' + chapterId + '/book-info');
-  }
+    getBookInfo(chapterId: number) {
+        return this.http.get<BookInfo>(this.baseUrl + 'book/' + chapterId + '/book-info');
+    }
 
-  getBookPageUrl(chapterId: number, page: number) {
-    return this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page;
-  }
+    getBookPageUrl(chapterId: number, page: number) {
+        return this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page;
+    }
 }

@@ -40,6 +40,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Comic_Neue";
+    src: url(../../../../assets/fonts/Comic_Neue/ComicNeue-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Atkison_Hyperlegible";
+    src: url(../../../../assets/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
 :root {
     --br-actionbar-button-text-color: #6c757d;
     --accordion-body-bg-color: black;
@@ -184,7 +196,7 @@ $action-bar-height: 38px;
     position: relative;
     height: 100%;
 
-   //background-color: purple !important;
+    //background-color: purple !important;
 
     &.column-layout-1 {
         height: calc((var(--vh, 1vh) * 100) - $action-bar-height);
@@ -201,17 +213,17 @@ $action-bar-height: 38px;
 }
 
 .book-content {
-  position: relative;
-  margin: 0 0;
-  padding: 20px 0px;
+    position: relative;
+    margin: 0 0;
+    padding: 20px 0px;
 
-  &.column-layout-1 {
-      height: calc((var(--vh) * 100) - calc($action-bar-height)); //  * 2
+    &.column-layout-1 {
+        height: calc((var(--vh) * 100) - calc($action-bar-height)); //  * 2
 
-      &.writing-style-vertical {
-          padding: 0 10px 0 0;
-          margin: 20px 0;
-      }
+        &.writing-style-vertical {
+            padding: 0 10px 0 0;
+            margin: 20px 0;
+        }
     }
 
     &.column-layout-2 {
@@ -232,7 +244,8 @@ $action-bar-height: 38px;
     //     //height: calc((var(--vh, 1vh) * 100) - $action-bar-height);
     // }
 
-    a, :link {
+    a,
+    :link {
         color: var(--brtheme-link-text-color);
     }
 
@@ -286,7 +299,9 @@ $action-bar-height: 38px;
 
 // A bunch of resets so books render correctly
 ::ng-deep .book-content {
-    & a, & :link {
+
+    & a,
+    & :link {
         color: blue;
     }
 }
@@ -390,12 +405,13 @@ $pagination-opacity: 0;
 
 
 .highlight {
-  background-color: rgba(65, 225, 100, 0.5) !important;
-  animation: fadein .5s both;
+    background-color: rgba(65, 225, 100, 0.5) !important;
+    animation: fadein .5s both;
 }
+
 .highlight-2 {
-  background-color: rgba(65, 105, 225, 0.5) !important;
-  animation: fadein .5s both;
+    background-color: rgba(65, 105, 225, 0.5) !important;
+    animation: fadein .5s both;
 }
 
 
@@ -407,7 +423,8 @@ $pagination-opacity: 0;
         border-color: transparent;
         background-color: unset;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border-color: var(--br-actionbar-button-hover-border-color);
         }
     }
@@ -416,7 +433,8 @@ $pagination-opacity: 0;
         border-color: transparent;
         background-color: unset;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border-color: var(--br-actionbar-button-hover-border-color);
         }
     }
