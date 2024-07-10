@@ -33,6 +33,41 @@
     src: url(../../../assets/fonts/OpenDyslexic2/OpenDyslexic-Regular.otf) format("opentype");
 }
 
+@font-face {
+    font-family: "Comic_Neue";
+    src: url(../../../../assets/fonts/Comic_Neue/ComicNeue-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Atkison_Hyperlegible";
+    src: url(../../../../assets/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url(../../../../assets/fonts/Lexend/static/Lexend-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Open_Sans";
+    src: url(../../../../assets/fonts/Open_Sans/static/OpenSans-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Source_Sans_3";
+    src: url(../../../../assets/fonts/Source_Sans_3/static/SourceSans3-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Frank_Ruhl_Libre";
+    src: url(../../../../assets/fonts/Frank_Ruhl_Libre/static/FrankRuhlLibre-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(../../../../assets/fonts/Comfortaa/static/Comfortaa-Regular.woff2) format("woff2");
+}
+
 :root {
     --br-actionbar-button-text-color: #6c757d;
     --accordion-body-bg-color: black;
@@ -86,13 +121,13 @@ $action-bar-height: 38px;
     opacity: 0;
 }
 
-::ng-deep .bg-warning  {
+::ng-deep .bg-warning {
     background-color: yellow;
 }
 
 
 .action-bar {
-    background-color: var(--br-actionbar-bg-color); 
+    background-color: var(--br-actionbar-bg-color);
     overflow: hidden;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 70%);
     max-height: $action-bar-height;
@@ -106,13 +141,13 @@ $action-bar-height: 38px;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-    
+
     @media(max-width: 875px) {
         .book-title {
             display: none;
         }
-    } 
-    
+    }
+
     .book-title {
         margin-top: 10px;
         text-align: center;
@@ -199,7 +234,8 @@ $action-bar-height: 38px;
         height: calc((var(--vh, 1vh) * 100) - $action-bar-height);
     }
 
-    a, :link {
+    a,
+    :link {
         color: var(--brtheme-link-text-color);
     }
 
@@ -238,7 +274,7 @@ $action-bar-height: 38px;
         overflow-wrap: break-word;
     }
 
-    
+
 }
 
 .column-layout-2 {
@@ -250,13 +286,15 @@ $action-bar-height: 38px;
         overflow-wrap: break-word;
     }
 
-    
+
 
 }
 
 // A bunch of resets so books render correctly
 ::ng-deep .book-content {
-    & a, & :link {
+
+    & a,
+    & :link {
         color: blue;
     }
 }
@@ -343,12 +381,13 @@ $action-bar-height: 38px;
 
 
 .highlight {
-  background-color: rgba(65, 225, 100, 0.5) !important;
-  animation: fadein .5s both;
+    background-color: rgba(65, 225, 100, 0.5) !important;
+    animation: fadein .5s both;
 }
+
 .highlight-2 {
-  background-color: rgba(65, 105, 225, 0.5) !important;
-  animation: fadein .5s both;
+    background-color: rgba(65, 105, 225, 0.5) !important;
+    animation: fadein .5s both;
 }
 
 
@@ -356,27 +395,29 @@ $action-bar-height: 38px;
 
 .btn {
     &.btn-secondary {
-        color: var(--br-actionbar-button-text-color); 
+        color: var(--br-actionbar-button-text-color);
         border-color: transparent;
         background-color: unset;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border-color: var(--br-actionbar-button-hover-border-color);
         }
     }
-    
+
     &.btn-outline-secondary {
         border-color: transparent;
         background-color: unset;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border-color: var(--br-actionbar-button-hover-border-color);
         }
     }
 
     span {
         background-color: unset;
-        color: var(--br-actionbar-button-text-color); 
+        color: var(--br-actionbar-button-text-color);
     }
 
     i {

@@ -31,9 +31,10 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getFontFamilies(): Array<FontFamily> {
-    return [{title: 'default', family: 'default'}, {title: 'EBGaramond', family: 'EBGaramond'}, {title: 'Fira Sans', family: 'Fira_Sans'}, 
-    {title: 'Lato', family: 'Lato'}, {title: 'Libre Baskerville', family: 'Libre_Baskerville'}, {title: 'Merriweather', family: 'Merriweather'},
-    {title: 'Nanum Gothic', family: 'Nanum_Gothic'}, {title: 'RocknRoll One', family: 'RocknRoll_One'}, {title: 'Open Dyslexic', family: 'OpenDyslexic2'}];
+    return [{ title: 'default', family: 'default' }, { title: 'EBGaramond', family: 'EBGaramond' }, { title: 'Fira Sans', family: 'Fira_Sans' },
+    { title: 'Lato', family: 'Lato' }, { title: 'Libre Baskerville', family: 'Libre_Baskerville' }, { title: 'Merriweather', family: 'Merriweather' },
+    { title: 'Nanum Gothic', family: 'Nanum_Gothic' }, { title: 'RocknRoll One', family: 'RocknRoll_One' }, { title: 'Open Dyslexic', family: 'OpenDyslexic2' },
+    { title: 'Comic Neue', family: 'Comic_Neue' }, { title: 'Atkison Hyperlegible', family: 'Atkison_Hyperlegible' }, { title: 'Lexend', family: 'Lexend' }, { title: 'Open Sans', family: 'Open_Sans' }, { title: 'Source Sans 3', family: 'Source_Sans_3' }, { title: 'Frank Ruhl Libre', family: 'Frank_Ruhl_Libre' }, { title: 'Comfortaa', family: 'Comfortaa' }];;
   }
 
   getBookChapters(chapterId: number) {
@@ -41,7 +42,7 @@ export class BookService {
   }
 
   getBookPage(chapterId: number, page: number) {
-    return this.http.get<string>(this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page, {responseType: 'text' as 'json'});
+    return this.http.get<string>(this.baseUrl + 'book/' + chapterId + '/book-page?page=' + page, { responseType: 'text' as 'json' });
   }
 
   getBookInfo(chapterId: number) {
