@@ -52,6 +52,36 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Lexend";
+    src: url(../../../../assets/fonts/Lexend/static/Lexend-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open_Sans";
+    src: url(../../../../assets/fonts/Open_Sans/static/OpenSans-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source_Sans_3";
+    src: url(../../../../assets/fonts/Source_Sans_3/static/SourceSans3-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Frank_Ruhl_Libre";
+    src: url(../../../../assets/fonts/Frank_Ruhl_Libre/static/FrankRuhlLibre-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(../../../../assets/fonts/Comfortaa/static/Comfortaa-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
 :root {
     --br-actionbar-button-text-color: #6c757d;
     --accordion-body-bg-color: black;
