@@ -33,7 +33,7 @@ BuildUI()
 {
     ProgressStart 'Building UI'
     cd ../Kavita-webui/ || exit
-    npm install
+    npm install --force
     npm run prod
     cd ../Kavita/ || exit
     ProgressEnd 'Building UI'
@@ -43,7 +43,7 @@ BuildUI()
     rm -rf API/wwwroot/*
     cd ../Kavita-webui/ || exit
     echo 'Installing web dependencies'
-    npm install
+    npm install --force
     echo 'Building UI'
     npm run prod
     echo 'Copying back to Kavita wwwroot'
@@ -108,4 +108,4 @@ Package "net6.0" "linux-arm64"
 cd "$dir"
 
 #Builds Docker images
-docker buildx build -t kizaing/kavita:nightly --platform linux/amd64,linux/arm/v7,linux/arm64 . --push
+docker buildx build -t soildusx/kavitamf:legacy --platform linux/amd64 . --push
